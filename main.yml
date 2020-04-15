@@ -12,7 +12,7 @@
 
     - name: Install Discourse dependencies
       shell:
-        cmd: /tmp/req.sh
+        cmd: sudo /tmp/req.sh
         executable: /bin/bash
       become: yes
  
