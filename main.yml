@@ -1,6 +1,6 @@
 -
   name: Install discourse on web servers
-  hosts: Servers
+  hosts: target1
   tasks:
 
     - name: Download req.sh
