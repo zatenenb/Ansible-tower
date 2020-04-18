@@ -3,6 +3,12 @@
   hosts: target1
   tasks:
 
+    - name: Install apache2
+      apt:
+        name: apache2
+        state: present
+      become: yes
+
     - name: Download req.sh
       get_url:
         url: https://raw.githubusercontent.com/techAPJ/install-rails/master/linux
