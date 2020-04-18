@@ -1,6 +1,6 @@
 -
   name: Install discourse on web servers
-  hosts: target1
+  hosts: servers
   tasks:
 
     - name: Install apache2
@@ -111,6 +111,18 @@
           'Password': 'changeme-white'
           'Repeat password': 'changeme-white'
           'Do you want to grant Admin privileges': 'y'
+        chdir: ~/discourse
+        echo: yes
+      become: yes
+
+    - name: Add Blue team account
+      expect:
+        command: /bin/bash /tmp/test.sh
+        responses:
+          'Email': 'blue-team@gaming.lockdown'
+          'Password': 'changeme-blue'
+          'Repeat password': 'changeme-blue'
+          'Do you want to grand Admin privileges': 'y'
         chdir: ~/discourse
         echo: yes
       become: yes
