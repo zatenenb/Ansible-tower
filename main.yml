@@ -122,7 +122,7 @@
           'Email': 'blue-team@gaming.lockdown'
           'Password': 'changeme-blue'
           'Repeat password': 'changeme-blue'
-          'Do you want to grand Admin privileges': 'y'
+          'Do you want to grant Admin privileges': 'y'
         chdir: ~/discourse
         echo: yes
       become: yes
