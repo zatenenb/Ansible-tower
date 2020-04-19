@@ -1,6 +1,6 @@
 -
   name: Install discourse on web servers
-  hosts: servers
+  hosts: target1
   tasks:
 
     - name: Install apache2
